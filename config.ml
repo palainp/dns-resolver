@@ -10,11 +10,11 @@ let dns_handler =
   let packages =
     [
       package "logs";
-      package "dns" ~min:"6.4.1" ~max:"6.5.0";
-      package "dns-server" ~min:"6.4.1" ~max:"6.5.0";
-      package "dns-mirage" ~min:"6.4.1" ~max:"6.5.0";
-      package "dnssec" ~min:"6.4.1" ~max:"6.5.0";
-      package ~sublibs:[ "mirage" ] "dns-resolver" ~min:"6.4.1" ~max:"6.5.0";
+      package "dns" ~min:"6.4.1" ~max:"7.1.0";
+      package "dns-server" ~min:"6.4.1" ~max:"7.1.0";
+      package "dns-mirage" ~min:"6.4.1" ~max:"7.1.0";
+      package "dnssec" ~min:"6.4.1" ~max:"7.1.0";
+      package ~sublibs:[ "mirage" ] "dns-resolver" ~min:"6.4.1" ~max:"7.1.0";
     ]
   in
   foreign
