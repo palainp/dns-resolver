@@ -1,4 +1,4 @@
-(* mirage >= 4.5.0 & < 4.6.0 *)
+(* mirage >= 4.5.0 & < 4.7.0 *)
 (* (c) 2017, 2018 Hannes Mehnert, all rights reserved *)
 
 open Mirage
@@ -22,4 +22,4 @@ let dns_handler =
     "Unikernel.Main" (random @-> pclock @-> mclock @-> time @-> stackv4v6 @-> job)
 
 let () =
-  register ~reporter:no_reporter "resolver" [dns_handler $ default_random $ default_posix_clock $ default_monotonic_clock $ default_time $ generic_stackv4v6 default_network ]
+  register "resolver" [dns_handler $ default_random $ default_posix_clock $ default_monotonic_clock $ default_time $ generic_stackv4v6 default_network ]
